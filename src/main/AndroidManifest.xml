@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+      Standalone manifest only for building the agent dex / dev testing. On-car there is no
+      component here: tools/build-host-apk.sh compiles AgentBroadcaster + AgentProbe into
+      classes2.dex and smali-hooks their run(Context) into the stock app's service onCreate.
+    -->
+    <application android:label="SM CAN Agent">
+        <uses-library android:name="android.car" android:required="false" />
+    </application>
+</manifest>
